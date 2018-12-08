@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding: 0;
+    color: #4a4a4a;
+    font-family: 'Merriweather', serif;
+}
+
+body{
+    max-width: 1024px;
+    margin:auto;
+    margin-top:100px;
+}
+
+.main_section{
+    display: flex;   
+}
+
+.leftbox{
+   
+   width:40%;
+    height:auto;
+    margin-right:20px;
+    background-image: url('img/img1.jpg');
+    background-position: center;  
+}
+
+.rightbox{
+   width:60%;
+}
+
+.article_img1,.article_img2,.article_img3{
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+
+}
+
+.cards{
+    display: flex;
+
+}
+
+.card1,.card2,.card3{
+    flex-grow: 1;
+    padding-right:20px;
+    padding-top: 24px;
+}
+
+
+
+h3{
+height: 100px;
+}
+
+.title{
+    padding: 16px 8px;
+    border-bottom: 10px solid blue;
+    max-width: 400px;
+    background-color: white;
+    position: relative;
+    left: -210px;
+    margin-top: 20px;
+}
+
+
+ /* This styles are for mobile */
+ @media only screen and (max-width: 500px) {
+    body {
+        margin-top: 0px;
+        
+    }
+    .main_section{
+        display:flex;
+        flex-direction: column;
+        
+        }
+
+        .leftbox{
+        width: 100%;
+        height: 300px;
+        }
+        .rightbox{
+            width:100%;
+            
+          
+            
+        }
+
+        
+        .cards{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top:-100px;
+            padding-left: 20px;
+        
+        
+        } 
+        .title{
+            left:0px;
+            top:-200px;
+            max-width: 300px;
+        }
+        
+        .card1,.card2,.card3{
+            display: flex;
+            flex-grow: 1;
+            
+        }
+
+        .article_img1,.article_img2,.article_img3{
+            width: auto;
+            height: 100px;
+            margin-top: 0px;
+        
+        }
+        
