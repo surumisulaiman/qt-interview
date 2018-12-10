@@ -15,6 +15,10 @@ body{
     margin:auto;
     margin-top:100px;
 }
+
+p{
+    margin-bottom: 16px;
+}
 a:link,
 a:visited{
 text-decoration:none;
@@ -81,6 +85,8 @@ height: 100px;
     top: 0;
     left: 0;
     z-index: 10;
+    opacity: 0;
+    visibility: hidden;
 }
 .pop_upcontent{
     width: 50%;
@@ -90,8 +96,20 @@ height: 100px;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    opacity: 0;
+    visibility: hidden;
     
 
+}
+
+#popup:target{
+    opacity: 1;
+    visibility: visible;
+
+}
+#popup:target .pop_upcontent{
+    opacity: 1;
+    visibility: visible;   
 }
 
 .close{
@@ -118,7 +136,14 @@ height: 100px;
 .para{
     font-size: 15px;
     padding: 20px 25px;
+    line-height: 20px;
+    position: relative;
 
+}
+.cont{
+    position: absolute;
+    right: 24px;
+    bottom: 8px;
 }
 
 
@@ -174,7 +199,17 @@ height: 100px;
             margin-top: 0px;
         
         }
+        /* This styles are for Mobile popup */
+.pop_upcontent{
+    width :90%;
+    height: auto;
+}
+.cont{
+    margin-bottom: 6px;
+}
+
     }
+
 
        
         
