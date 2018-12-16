@@ -1,11 +1,13 @@
 :root{
 --primary-color: #0165a7;
+--second-color:white;
+--leftbox-color:#4a4a4a;
 }
 
 *{
     margin:0;
     padding: 0;
-    color: #4a4a4a;
+    color: var(--leftbox-color);
     font-family: 'Merriweather', serif;
     box-sizing: border-box;
 }
@@ -19,6 +21,7 @@ body{
 p{
     margin-bottom: 16px;
 }
+
 a:link,
 a:visited{
 text-decoration:none;
@@ -29,8 +32,7 @@ text-decoration:none;
 }
 
 .leftbox{
-   
-   width:40%;
+    width:40%;
     height:auto;
     margin-right:20px;
     background-image: url('img/img1.jpg');
@@ -53,13 +55,11 @@ text-decoration:none;
 
 }
 
-.card1,.card2,.card3{
+.card{
     flex-grow: 1;
     padding-right:20px;
     padding-top: 24px;
-}  
-
-
+} 
 
 h3{
 height: 100px;
@@ -69,7 +69,7 @@ height: 100px;
     padding: 16px 8px;
     border-bottom: 10px solid var(--primary-color);
     max-width: 400px;
-    background-color: white;
+    background-color: var(--second-color);
     position: relative;
     left: -210px;
     margin-top: 20px;
@@ -88,6 +88,7 @@ height: 100px;
     opacity: 0;
     visibility: hidden;
 }
+
 .pop_upcontent{
     width: 50%;
     height: 70%;
@@ -98,15 +99,13 @@ height: 100px;
     transform: translate(-50%,-50%);
     opacity: 0;
     visibility: hidden;
-    
-
 }
 
 #popup:target{
     opacity: 1;
     visibility: visible;
-
 }
+
 #popup:target .pop_upcontent{
     opacity: 1;
     visibility: visible;   
@@ -115,100 +114,86 @@ height: 100px;
 .close{
     position: absolute;
     font-size: 30px;
-    color: white;
+    color: var(--second-color);
     top: 16px;
     right: 20px;
-    
-
 }
+
 .popup_title{
     
     background-color: var(--primary-color);
-
-
 }
+
 .popup_title h2{
-    color: white;
+    color: var(--second-color);
     font-size: 30px;
     max-width: 700px;
     padding: 40px 25px;
 }
+
 .para{
     font-size: 15px;
     padding: 20px 25px;
     line-height: 20px;
     position: relative;
-
 }
+
 .cont{
     position: absolute;
     right: 24px;
     bottom: 8px;
 }
 
-
-
- /* This styles are for mobile */
+/* This styles are for mobile */
  @media only screen and (max-width: 500px) {
+        
     body {
-        margin-top: 0px;
-        
-    }
-    .main_section{
-        display:flex;
-        flex-direction: column;
-        
-        }
-
-        .leftbox{
-        width: 100%;
-        height: 300px;
-        }
-        .rightbox{
-            width:100%;
-            
-          
-            
-        }
-
-        
-        .cards{
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            top:-100px;
-            padding-left: 20px;
-        
-        
-        } 
-        .title{
-            left:0px;
-            top:-200px;
-            max-width: 300px;
-        }
-        
-        .card1,.card2,.card3{
-            display: flex;
-            flex-grow: 1;
-            
-        }
-
-        .article_img1,.article_img2,.article_img3{
-            width: auto;
-            height: 100px;
             margin-top: 0px;
-        
+            
         }
-        /* This styles are for Mobile popup */
-.pop_upcontent{
-    width :90%;
-    height: auto;
-}
-.cont{
-    margin-bottom: 6px;
-}
+        .main_section{
+            display:flex;
+            flex-direction: column;
+             }
+            .leftbox{
+            width: 100%;
+            height: 300px;
+            }
+            .rightbox{
+                width:100%;
+            }
+             .cards{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                top:-100px;
+                padding-left: 20px;
+            } 
+            .title{
+                left:0px;
+                top:-200px;
+                max-width: 300px;
+            }
+            
+            .card{
+                display: flex;
+                flex-grow: 1;
+            }
 
+            .article_img1,.article_img2,.article_img3{
+                width: auto;
+                height: 100px;
+                margin-top: 0px;
+            }
+            /* This styles are for Mobile popup */
+    .pop_upcontent{
+        width :90%;
+        height: auto;
     }
+    .cont{
+        margin-bottom: 6px;
+    }
+}
 
 
        
